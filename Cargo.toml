@@ -1,0 +1,65 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/qo-core",
+    "crates/qo-providers",
+    "crates/qo-tools",
+    "crates/qo-net",
+    "crates/qo-pipeline",
+    "crates/qo-swarm",
+    "crates/qo-media",
+    "crates/qwenodyssey",
+]
+
+[workspace.package]
+version = "2.0.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Everaldtah/qwenodyssey-2.0"
+authors = ["EveraldTah <evraldtah@gmail.com>"]
+rust-version = "1.80"
+
+[workspace.dependencies]
+qo-core = { path = "crates/qo-core" }
+qo-providers = { path = "crates/qo-providers" }
+qo-tools = { path = "crates/qo-tools" }
+qo-net = { path = "crates/qo-net" }
+qo-pipeline = { path = "crates/qo-pipeline" }
+qo-swarm = { path = "crates/qo-swarm" }
+qo-media = { path = "crates/qo-media" }
+
+tokio = { version = "1", features = ["full"] }
+tokio-util = "0.7"
+futures = "0.3"
+async-trait = "0.1"
+anyhow = "1"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+toml = "0.8"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls", "gzip"] }
+regex = "1"
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.28"
+ratatui = "0.29"
+similar = "2"
+ignore = "0.4"
+globset = "0.4"
+walkdir = "2"
+dirs = "5"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+rand = "0.8"
+portable-pty = "0.8"
+scraper = "0.20"
+urlencoding = "2"
+base64 = "0.22"
+which = "6"
+unicode-width = "0.2"
+strip-ansi-escapes = "0.2"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = true

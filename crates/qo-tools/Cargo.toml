@@ -1,0 +1,24 @@
+[package]
+name = "qo-tools"
+description = "Qwenodyssey 2.0 local tools: files, shell, git, search, code navigation, edit blocks, persistent shell session, tool-call prep."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+qo-core = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+regex = { workspace = true }
+globset = { workspace = true }
+walkdir = { workspace = true }
+dirs = { workspace = true }
+rand = { workspace = true }
+portable-pty = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

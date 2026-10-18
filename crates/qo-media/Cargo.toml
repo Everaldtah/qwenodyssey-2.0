@@ -1,0 +1,22 @@
+[package]
+name = "qo-media"
+description = "Qwenodyssey 2.0 voice + vision: webcam/mic capture (ffmpeg), VAD, whisper STT, Piper TTS, vision and omni models, and the live/mictest/miclevel commands."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+qo-core = { workspace = true }
+# qo-providers: added back for bridge.rs (resolve_nvidia_key) once crates/qo-providers/READY exists
+tokio = { workspace = true }
+anyhow = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { workspace = true }
+regex = { workspace = true }
+crossterm = { workspace = true }
+dirs = { workspace = true }
+base64 = { workspace = true }
+
+[dev-dependencies]
+async-trait = { workspace = true }
+tempfile = { workspace = true }

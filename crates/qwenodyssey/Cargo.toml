@@ -1,0 +1,36 @@
+[package]
+name = "qwenodyssey"
+description = "Qwenodyssey 2.0 - a coding agent CLI for local and cloud models, in Rust."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "qwenodyssey"
+path = "src/main.rs"
+
+[dependencies]
+qo-core = { workspace = true }
+qo-providers = { workspace = true }
+qo-tools = { workspace = true }
+qo-net = { workspace = true }
+qo-pipeline = { workspace = true }
+qo-swarm = { workspace = true }
+qo-media = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+regex = { workspace = true }
+clap = { workspace = true }
+crossterm = { workspace = true }
+unicode-width = { workspace = true }
+dirs = { workspace = true }
+chrono = { workspace = true }
+rand = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

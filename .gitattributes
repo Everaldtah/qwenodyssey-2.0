@@ -1,0 +1,5 @@
+# Check out source as LF on every platform (core.autocrlf would otherwise turn
+# multi-line string literals in tests into CRLF). The embedded prompts keep
+# their exact bytes: see crates/qo-core/prompts/.gitattributes.
+* text=auto eol=lf
+*.exe binary

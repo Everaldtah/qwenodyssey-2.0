@@ -1,0 +1,28 @@
+[package]
+name = "qo-swarm"
+description = "Qwenodyssey 2.0 agent swarm: frontier fan-out, coordinated swarm, exec backends, agent_swarm tool, live TUI."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+qo-core = { workspace = true }
+qo-providers = { workspace = true }
+qo-tools = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+futures = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { workspace = true }
+regex = { workspace = true }
+chrono = { workspace = true }
+unicode-width = { workspace = true }
+ratatui = { workspace = true }
+crossterm = { workspace = true, features = ["event-stream"] }
+strip-ansi-escapes = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

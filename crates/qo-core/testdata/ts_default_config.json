@@ -1,0 +1,182 @@
+{
+  "model": {
+    "provider": "ollama",
+    "model": "qwen3.5:9b",
+    "fallback_models": [
+      "nvidia:deepseek-ai/deepseek-v4-pro",
+      "nvidia:moonshotai/kimi-k2.6",
+      "qwen2.5-coder:7b",
+      "deepseek-r1:7b",
+      "igorls/gemma-4-12B-it-heretic-GGUF"
+    ],
+    "base_url": "http://localhost:11434",
+    "api_key": "",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 0,
+    "repeat_penalty": 0,
+    "presence_penalty": 0,
+    "auto_tune": true,
+    "think": "auto",
+    "gpu_layers": -1,
+    "low_vram": false,
+    "keep_alive": "30m",
+    "max_tokens": 8192,
+    "context_tokens": 16384
+  },
+  "agent": {
+    "max_retries": 4,
+    "auto_apply": false,
+    "auto_test": true,
+    "review_before_apply": true,
+    "small_model_mode": true,
+    "edit_protocol": "blocks",
+    "candidates": 2,
+    "verify_after_edit": true,
+    "prebuild_symbol_index": true,
+    "max_tool_steps": 16,
+    "thinking_mode": true,
+    "max_thinking_turns": 16
+  },
+  "tools": {
+    "allow_shell": true,
+    "confirm_destructive": true,
+    "sandbox": true,
+    "allow_self_edit": false,
+    "allow_commands": [],
+    "deny_commands": [],
+    "shell_timeout_ms": 240000,
+    "shell_session": false
+  },
+  "memory": {
+    "enabled": true,
+    "path": ".qwenodyssey/memory"
+  },
+  "knowledge": {
+    "enabled": true,
+    "path": "",
+    "auto_recall": true,
+    "recall_k": 4,
+    "embed_model": "nomic-embed-text"
+  },
+  "web": {
+    "enabled": true,
+    "provider": "duckduckgo",
+    "api_key": "",
+    "searxng_url": "",
+    "max_results": 5,
+    "fetch_chars": 8000,
+    "fetch_timeout_ms": 15000
+  },
+  "mcp": {
+    "enabled": false,
+    "servers": {},
+    "init_timeout_ms": 20000,
+    "call_timeout_ms": 60000
+  },
+  "github": {
+    "enabled": true,
+    "token": "",
+    "token_env": "GITHUB_TOKEN",
+    "default_owner": "",
+    "api_base": "https://api.github.com"
+  },
+  "swarm": {
+    "enabled": true,
+    "max_workers": 4,
+    "include_local": false,
+    "synthesizer": "primary",
+    "max_tokens": 1500,
+    "coordinate": true,
+    "live": true,
+    "exec": "off",
+    "exec_max_steps": 5,
+    "exec_timeout_s": 120,
+    "preflight": true
+  },
+  "daytona": {
+    "enabled": true,
+    "base_url": "https://app.daytona.io/api",
+    "api_key": "",
+    "api_key_env": "DAYTONA_API_KEY",
+    "snapshot": "",
+    "target": "",
+    "auto_stop_minutes": 15,
+    "auto_delete_minutes": 120
+  },
+  "evolution": {
+    "enabled": true,
+    "reflect_on_failure": true
+  },
+  "lmstudio": {
+    "enabled": true,
+    "base_url": "http://localhost:1234",
+    "api_key": "",
+    "cli_path": "",
+    "start_server": true,
+    "include_as_fallback": true,
+    "safe_load": true,
+    "big_params_b": 20,
+    "big_size_gb": 14,
+    "big_context": 8192,
+    "ttl_seconds": 1800
+  },
+  "nvidia": {
+    "enabled": true,
+    "base_url": "https://integrate.api.nvidia.com",
+    "api_key": "",
+    "api_key_env": "NVIDIA_API_KEY",
+    "include_as_fallback": true,
+    "disable_thinking": true,
+    "request_timeout_ms": 90000,
+    "nemotron_thinking": true,
+    "reasoning_budget": 0
+  },
+  "openrouter": {
+    "enabled": true,
+    "base_url": "https://openrouter.ai/api",
+    "api_key": "",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "include_as_fallback": true,
+    "request_timeout_ms": 90000
+  },
+  "anthropic": {
+    "enabled": true,
+    "base_url": "https://api.anthropic.com",
+    "auth_token": "",
+    "auth_token_env": "ANTHROPIC_AUTH_TOKEN",
+    "use_cli_auth": true,
+    "api_key": "",
+    "api_key_env": "ANTHROPIC_API_KEY",
+    "include_as_fallback": true,
+    "request_timeout_ms": 120000
+  },
+  "vision": {
+    "enabled": true,
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-nano-12b-v2-vl",
+    "device": "",
+    "confirm": true
+  },
+  "audio": {
+    "enabled": true,
+    "device": "",
+    "whisper_bin": "",
+    "whisper_model": "",
+    "max_seconds": 30,
+    "language": "en",
+    "vad_threshold": 0.6
+  },
+  "tts": {
+    "enabled": true,
+    "engine": "piper",
+    "piper_bin": "",
+    "piper_voice": ""
+  },
+  "omni": {
+    "enabled": false,
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "provider": "nvidia",
+    "send_image": true
+  }
+}

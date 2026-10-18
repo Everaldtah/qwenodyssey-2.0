@@ -1,0 +1,24 @@
+[package]
+name = "qo-providers"
+description = "Qwenodyssey 2.0 model backends: OpenAI-compatible (LM Studio, vLLM, llama.cpp, OpenAI, NVIDIA NIM, OpenRouter), Ollama native, Anthropic Messages, plus the provider factory and LM Studio `lms` control."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+qo-core = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { workspace = true }
+regex = { workspace = true }
+dirs = { workspace = true }
+which = { workspace = true }
+bytes = "1"
+
+[dev-dependencies]
+tokio = { workspace = true }
+serde_json = { workspace = true }

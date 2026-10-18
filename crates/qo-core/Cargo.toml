@@ -1,0 +1,23 @@
+[package]
+name = "qo-core"
+description = "Qwenodyssey 2.0 core: shared types, traits, config, model profiles, prompts."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true, features = ["preserve_order"] }
+regex = { workspace = true }
+dirs = { workspace = true }
+chrono = { workspace = true }
+indexmap = { version = "2", features = ["serde"] }
+
+[dev-dependencies]
+tempfile = { workspace = true }
